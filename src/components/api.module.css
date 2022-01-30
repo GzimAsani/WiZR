@@ -1,0 +1,39 @@
+.capitalize {
+  text-transform: capitalize;
+  list-style-type: none;
+  font-size: 0.6rem;
+}
+
+.flex {
+  display: flex;
+}
+
+.image img {
+  border-radius: 30%;
+  border: 2px solid black;
+  margin: 10px auto;
+  width: 50%;
+  display: flex;
+
+}
+
+.image {
+  padding: 0;
+  margin: 0;
+}
+
+button {
+  margin-right: 1rem;
+  border-radius: 20%;
+}
+
+
+.center {
+  display: flex;
+  justify-content: center;
+}
+
+
+.mainImage {
+  position: relative;
+}
