@@ -1,7 +1,6 @@
 # City Reviewer Front-end
 
-City Reviewer is a full stack application which allows it's users to login using google auth and than view and give reivews to ballkan capitals
-
+THis project is done as part of the interview
 ![img](./src/assets/pic.png)
 
 ## Built With
