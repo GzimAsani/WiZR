@@ -1,4 +1,4 @@
-# City Reviewer Front-end
+# WiZR PROJECT
 
 THis project is done as part of the interview
 ![img](./src/assets/pic.png)
@@ -17,11 +17,6 @@ THis project is done as part of the interview
 3. - [ ] Run git clone and `git@github.com:GzimAsani/WiZR.git` or with HTTP`https://github.com/GzimAsani/WiZR.git`
 4. - [ ] `cd` in the clonet repo and run `npm install`
 5. - [ ] run `npm start` to start the project
-
-> In order to see the testing of this project please follow the following steps:
-
-1. - [ ] Install jest using `npm install --save-dev jest`
-2. - [ ] run `npm test`
 
 ## Author
 
