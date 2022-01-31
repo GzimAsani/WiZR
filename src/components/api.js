@@ -1,14 +1,16 @@
 import { useEffect, useState } from "react";
-import classes from "./api.module.css";
-import RightArrow from "./RightArrow";
+import classes from "./api.module.scss";
+import Slider from "./Slider";
+import Card from "./ui/card";
 
-const GetData = (props) => {
+const GetData = () => {
   const [data, setData] = useState([]);
-  const [current, setCurrent] = useState("");
-  const [currentPic, setCurrentPic] = useState(0);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     const getData = async () => {
+      setLoading(true);
+      console.log("fetching..");
       const response = await fetch(
         "https://jsonplaceholder.typicode.com/photos/?_limit=6'"
       );
@@ -26,66 +28,26 @@ const GetData = (props) => {
         });
       }
       setData(loadedData);
+      setLoading(false);
     };
+
+    console.log("done");
     getData();
   }, []);
 
-  const titles = data.map((dat, index) => {
-    let word = dat.name;
-    let split = word.match(/^(\S+)\s(.*)/).slice(1);
-    return (
-      <section className={classes.section} key={dat.id}>
-        <div className={classes.image}>
-          <button onClick={() => setCurrent({ img: dat.image, id: dat.id })}>
-            <div>{<img src={dat.icon} alt={dat.name} />}</div>
-          </button>
-        </div>
-        <div className={classes.center}>
-          <h3 className={classes.capitalize} key={dat.id}>
-            {split[0]}
-          </h3>
-        </div>
-      </section>
-    );
-  });
-
-  // const length = titles.length;
-
-  // const nextSlide = () => {
-  //   setCurrentPic(currentPic === length - 1 ? 0 : currentPic + 1);
-  // };
-  // console.log(currentPic);
-
-  // const prevSlide = () => {
-  //   setCurrentPic(currentPic === 0 ? length : currentPic - 1);
-  // };
-
-  // if (!Array.isArray(data) || length <= 0) {
-  //   return null;
-  // }
-
   const length = data.length - 1;
-
+  console.log(data);
   return (
-    <div>
-      <div className={classes.flex}>{titles}</div>
-      <div className={classes.flex}>
-        {/* <FaRegArrowAltCircleLeft
-          onClick={prevSlide}
-          className={classes.leftArrow}
-        /> */}
-        {/* {current ? (
-          <img className={classes.mainImage} src={current.img} alt="s" />
+    <div className={classes.mainDiv}>
+      <Card>
+        {loading ? (
+          <div>
+            <h1>Fetching data... Please wait</h1>
+          </div>
         ) : (
-          "Loading"
-        )} */}
-        <RightArrow data={current} title={data} length={length} />
-
-        {/* <FaRegArrowAltCircleRight
-          onClick={nextSlide}
-          className={classes.rightArrow}
-        /> */}
-      </div>
+          <Slider data={data} title={data} length={length} />
+        )}
+      </Card>
     </div>
   );
 };

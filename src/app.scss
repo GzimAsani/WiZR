@@ -1,0 +1,23 @@
+.arrow-left {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  cursor: pointer;
+  font-size: 2rem;
+}
+.arrow-right {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  font-size: 2rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .arrow-left {
+    display: none;
+  }
+
+  .arrow-right {
+    display: none;
+  }
+}

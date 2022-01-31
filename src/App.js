@@ -1,5 +1,7 @@
 import GetData from "./components/api";
-import classes from "./app.module.css";
+import classes from "./app.module.scss";
+import './app.scss';
+
 
 function App() {
   return (

@@ -4,19 +4,19 @@ import {
   FaRegArrowAltCircleLeft,
   FaRegArrowAltCircleRight,
 } from "react-icons/fa";
-import classes from "./rightArrow.module.css";
 
 const RightArrow = ({ data, title }) => {
-  const [arrowManage, setArrowManage] = useState(0);
-
-  console.log(title);
+  const [activeIndex, setActiveIndex] = useState(0);
 
   return (
-    <div>
-      {title.map((all) => {
-        return all.id;
-      })}
-    </div>
+    <section>
+      {title.map((all, index) => (
+        <div key={index}>
+          {console.log(all)}
+          <img src={all.image} alt="s" />
+        </div>
+      ))}
+    </section>
   );
 };
 

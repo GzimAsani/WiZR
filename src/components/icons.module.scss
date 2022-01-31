@@ -1,0 +1,86 @@
+.capitalize {
+  text-transform: capitalize;
+  list-style-type: none;
+  font-size: 0.6rem;
+}
+
+.image img {
+  border-radius: 30%;
+  border: 2px solid black;
+  margin: 10px auto;
+  width: 50%;
+  display: flex;
+}
+
+button {
+  margin-right: 1rem;
+  border-radius: 20%;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+}
+
+.mainImage {
+  position: relative;
+}
+
+.section {
+  margin: auto;
+  display: flex;
+  width: 65%;
+}
+
+.section2 {
+  justify-content: center;
+}
+
+.active {
+  transition-property: background-color;
+  transition-duration: 1.5s;
+  background-color: rgb(201, 167, 58);
+}
+
+@media only screen and (max-width: 600px) {
+  .capitalize {
+    font-size: 0.5rem;
+  }
+
+  .image img {
+    width: 100%;
+    margin: 0 auto;
+    justify-self: center;
+  }
+
+  .section {
+    width: 80%;
+  }
+
+  .image {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .active {
+    margin: 1px;
+  }
+
+  .section2 {
+    margin: 0;
+  }
+
+  .active2 {
+    margin: 1px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .capitalize {
+    font-size: 0.4rem;
+  }
+
+  .section {
+    width: 90%;
+  }
+}
