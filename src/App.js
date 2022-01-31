@@ -1,11 +1,9 @@
 import GetData from "./components/api";
-import classes from "./app.module.scss";
-import './app.scss';
-
+import "./app.scss";
 
 function App() {
   return (
-    <div className={classes.main}>
+    <div>
       <GetData />
     </div>
   );

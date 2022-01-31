@@ -7,10 +7,10 @@ import {
 const Arrows = ({ prevSlide, nextSlide }) => {
   return (
     <>
-      <span className="prev" onClick={prevSlide}>
+      <span onClick={prevSlide}>
         <FaRegArrowAltCircleLeft className="arrow-left" />
       </span>
-      <span className="next" onClick={nextSlide}>
+      <span onClick={nextSlide}>
         <FaRegArrowAltCircleRight className="arrow-right" />
       </span>
     </>

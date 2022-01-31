@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import classes from "./api.module.scss";
 import Slider from "./Slider";
-import Card from "./ui/card";
+import Card from "../ui/card";
 
 const GetData = () => {
   const [data, setData] = useState([]);
